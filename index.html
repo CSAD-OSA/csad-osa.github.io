@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['login'])) {
 if (isset($_GET['logout'])) {
     unset($_SESSION['admin']);
     session_destroy();
-    header("Location: CSAD-OSA.php");
+    header("Location: index.html");
     exit;
 }
 
@@ -88,7 +88,7 @@ if (isset($_SESSION['admin']) && isset($_GET['delete'])) {
     });
     $events = array_values($events);
     saveEvents($eventsFile, $events);
-    header("Location: CSAD-OSA.php");
+    header("Location: index.html");
     exit;
 }
 
